@@ -1,7 +1,5 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
-@import url('https://fonts.googleapis.com/css?family=Abel');
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
 
 
@@ -12,7 +10,7 @@ ELEMENTS
 *****************************************/
 
 body {
-    color:#333;
+    color: #333;
     font-family: 'Josefin Slab', serif;
     font-size: 1em;
     font-weight: 300;
@@ -45,22 +43,23 @@ p {
 }
 
 #content h2 {
+    color: white;
     font-family: 'Fredericka the Great', cursive;
     font-size: 4.5em;
     font-weight: 300;
     letter-spacing: .05em;
+    opacity: .9;
+    padding: 0 1rem;
     text-align: center;
-    color: white;
     text-transform: uppercase;
     z-index: 10;
-    opacity: .9;
 }
 
 #content h3 {
     font-size: 1.35em;
     font-weight: 100;
     letter-spacing: .035em;
-    margin:0 0 .15em 0;
+    margin: 0 0 .15em 0;
     text-transform: uppercase;
     color: black;
 }
@@ -83,8 +82,8 @@ p {
 /* Section - Block */
 /**************************/
 #content .block {
-    padding: 3em;
-    width: 40em;
+    padding: 3em 1.5em;
+    max-width: 40em;
     margin: 0 auto;
     text-align: justify;
 }
@@ -92,8 +91,8 @@ p {
 /* Section - Parallax */
 /**************************/
 #content .parallax {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 12em;
+    padding-bottom: 12em;
     overflow: hidden;
     width: 100%;
     background-image: url(https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6c18d87b91cee85cbe63912304dba923&auto=format&fit=crop&w=3150&q=80);
@@ -121,38 +120,23 @@ p {
 /* Media Queries */
 /**************************/
 
-//@media screen and (max-width: 959px) and (min-width: 768px) {
-//    #content .block {
-//        padding: 40px;
-//        width: 620px;
-//    }
-//}
-//
-//@media screen and (max-width: 767px) {
-//    #content .block {
-//        padding: 30px;
-//        width: 420px;
-//    }
-//
-//    #content h2 {
-//        font-size: 30px;
-//    }
-//
-//    #content .block {
-//        padding: 30px;
-//    }
-//
-//    #content .parallax-one,
-//    #content .parallax-two,
-//    #content .parallax-three {
-//        padding-top: 100px;
-//        padding-bottom: 100px;
-//    }
-//}
-//
-//@media screen and (max-width: 479px) {
-//    #content .block {
-//        padding: 30px 15px;
-//        width: 290px;
-//    }
-//}
+
+@media screen and (max-width: 767px) {
+    #content .parallax {}
+
+    #content h2 {
+        font-size: 3.25em;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    #content .parallax {
+        padding-top: 8em;
+        padding-bottom: 8em;
+    }
+
+    #content h2 {
+        font-size: 2.5em;
+        hyphens: auto;
+    }
+}
